@@ -12,6 +12,9 @@ DB_PASS="laravel"
 ADMIN_EMAIL="admin@example.com"
 ADMIN_PASSWORD="password"
 
+echo "==> Provisioning system toolchain (PHP, MariaDB, Composer, Node)"
+bash "$REPO_ROOT/.cursor/provision-system.sh"
+
 echo "==> Installing PHP dependencies"
 composer install --no-interaction --prefer-dist --no-progress
 
